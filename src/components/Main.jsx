@@ -3,6 +3,11 @@ import Form from "./Form";
 
 function Main() {
   const [open, setOpen] = useState(false); //Ignore this state
+  const [answerLists, setAnswerLists] = useState([]);
+
+  function addNewAnswerList(newAnswer) {
+    setAnswerLists([...answerLists, newAnswer]);
+  }
 
   return (
     <main className="main">
@@ -11,7 +16,7 @@ function Main() {
         {/* answers should go here */}
       </section>
       <section className="main__form">
-        <Form />
+        <Form addNewAnswerList={addNewAnswerList} />
       </section>
     </main>
   );

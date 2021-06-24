@@ -10,6 +10,7 @@ export default function CheckBox({ props }) {
               name={features.name}
               type={features.type}
               value={features.value}
+              onChange={features.onChange}
             >
               {" "}
               {features.text}{" "}

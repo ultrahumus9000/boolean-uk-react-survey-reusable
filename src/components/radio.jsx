@@ -1,6 +1,6 @@
 import ReusebleRadio from "./ReusebleRadio";
 
-export default function RadioList({ props }) {
+export default function RadioList({ props, onChange }) {
   return (
     <ul>
       {props.map((item, index) => {
@@ -12,6 +12,7 @@ export default function RadioList({ props }) {
             name={item.name}
             value={item.value}
             text={item.value}
+            onChange={onChange}
           />
         );
       })}
